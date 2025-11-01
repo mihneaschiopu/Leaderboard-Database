@@ -17,21 +17,21 @@ def read_scores(filename):
 def display_scores(scores):
   print("All Player Scores")
   for record in scores:            # displays all scores from name, game and score from the other def
-    print(record['name'], record['game'], record['score'])  # procedure
+    print(record["name"], record["game"], record["score"])  # procedure
   return ''
  
    
 def game(scores):
   chosen_game = input("Which game score would you like to see?")
   gamers = []
-  print('All gamers for ' + chosen_game)
+  print("All gamers for " + chosen_game)
   for record in scores:
-    if record['game'].lower() == chosen_game:
-      gamers.append({'name': record['name'], 'score': record['score']})
-      print(record['name'], record['game'], record['score'])
+    if record["game"].lower() == chosen_game:
+      gamers.append({"name": record["name"], "score": record["score"]})
+      print(record["name"], record["game"], record["score"])
     
   gamers.sort(key=sorter)
-  print('Highest scorer:')
+  print("Highest scorer:")
   print(gamers[len(gamers)-1])
   
         
